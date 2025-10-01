@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    volume.beta.kubernetes.io/storage-provisioner: openshift-storage.rbd.csi.ceph.com
+    volume.kubernetes.io/storage-provisioner: openshift-storage.rbd.csi.ceph.com
+  labels:
+    app: containerized-data-importer
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/managed-by: cdi-controller
+    app.kubernetes.io/part-of: hyperconverged-cluster
+    app.kubernetes.io/version: 4.18.1
+  name: src-disk-mig-2be7il
+  namespace: koray
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: '2147483648'
+  storageClassName: ocs-storagecluster-ceph-rbd-replica2
+  volumeMode: Block
+  volumeName: pvc-9ee997d8-b3a0-4cf3-92a5-740c4e5551f2

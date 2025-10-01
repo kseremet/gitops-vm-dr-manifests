@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - pv-pvc-9ee997d8-b3a0-4cf3-92a5-740c4e5551f2.yaml
+  - pvc-src-disk-mig-2be7il.yaml
+  - vm-demo-vm.yaml

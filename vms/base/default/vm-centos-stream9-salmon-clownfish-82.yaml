@@ -1,7 +1,8 @@
 apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
-  annotations: {}
+  annotations:
+    dr.demojam.com/source-generation: 2
   labels:
     app: centos-stream9-salmon-clownfish-82
     dr.demojam.com/enabled: 'true'

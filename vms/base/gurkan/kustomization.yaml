@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - pv-pvc-99e796f8-3c13-4856-b4d4-b3c68aa1a393.yaml
+  - pvc-fedora-aqua-tiglon-23.yaml
+  - vm-fedora-aqua-tiglon-23.yaml

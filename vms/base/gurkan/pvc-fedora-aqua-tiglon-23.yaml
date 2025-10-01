@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations: {}
+  labels:
+    app: containerized-data-importer
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/managed-by: cdi-controller
+    app.kubernetes.io/part-of: hyperconverged-cluster
+    app.kubernetes.io/version: 4.19.6
+    instancetype.kubevirt.io/default-instancetype: u1.medium
+    instancetype.kubevirt.io/default-preference: fedora
+    kubevirt.io/created-by: 2f050af3-7a3c-448e-8f16-6de673fdd3db
+  name: fedora-aqua-tiglon-23
+  namespace: gurkan
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: '32212254720'
+  storageClassName: ocs-storagecluster-ceph-rbd-virtualization
+  volumeMode: Block
+  volumeName: pvc-99e796f8-3c13-4856-b4d4-b3c68aa1a393

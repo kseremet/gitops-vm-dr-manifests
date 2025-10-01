@@ -3,5 +3,6 @@ kind: Kustomization
 
 # Include all YAML manifest files in this directory
 resources:
+  - gurkan
   - koray
   - default

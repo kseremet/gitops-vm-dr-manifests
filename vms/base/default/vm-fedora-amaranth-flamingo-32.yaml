@@ -2,7 +2,7 @@ apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
   annotations:
-    dr.demojam.com/source-generation: 3
+    dr.demojam.com/source-generation: 4
   labels:
     app: fedora-amaranth-flamingo-32
     dr.demojam.com/enabled: 'true'
@@ -57,6 +57,9 @@ spec:
           - disk:
               bus: virtio
             name: cloudinitdisk
+          - disk:
+              bus: virtio
+            name: disk-orange-leopon-95
           interfaces:
           - macAddress: 02:e9:21:00:00:10
             masquerade: {}
@@ -93,3 +96,6 @@ spec:
 
             chpasswd: { expire: False }'
         name: cloudinitdisk
+      - name: disk-orange-leopon-95
+        persistentVolumeClaim:
+          claimName: dv-fedora-amaranth-flamingo-32-apricot-chameleon-22

@@ -1,6 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - pv-pvc-5926960b-5559-49d6-bd74-9ef972f23b6b.yaml
+  - pvc-dv-fedora-amaranth-flamingo-32-apricot-chameleon-22.yaml
   - pv-pvc-91cff9e1-5e40-4a34-95dd-3acb71d9dd1e.yaml
   - pvc-fedora-amaranth-flamingo-32.yaml
   - vm-fedora-amaranth-flamingo-32.yaml

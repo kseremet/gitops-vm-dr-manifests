@@ -1,0 +1,31 @@
+# This ApplicationSet is managed by the DemoJam DR automation.
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: vm-disaster-recovery
+  namespace: openshift-gitops
+spec:
+  generators:
+    - git:
+        repoURL: "git@github.com:kseremet/gitops-vm-dr-manifests.git"
+        revision: HEAD
+        directories:
+          - path: vms/base/*
+  template:
+    metadata:
+      name: "dr-vm-{{ path.basename }}-cls2"
+    spec:
+      project: default
+      source:
+        repoURL: "git@github.com:kseremet/gitops-vm-dr-manifests.git"
+        targetRevision: HEAD
+        path: "vms/overlays/cls2/{{ path.basename }}"
+      destination:
+        name: "cls2"
+        namespace: "{{ path.basename }}"
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true

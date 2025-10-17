@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - pv-pvc-b327a328-30e8-49a4-89e1-5beaeaadbfa4.yaml
+  - pvc-fedora-lime-rook-90.yaml
+  - vm-fedora-lime-rook-90.yaml

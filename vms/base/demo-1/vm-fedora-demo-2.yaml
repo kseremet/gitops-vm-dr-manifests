@@ -2,7 +2,7 @@ apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
   annotations:
-    dr.demojam.com/source-generation: 1
+    dr.demojam.com/source-generation: 2
   labels:
     app: fedora-demo-2
     dr.demojam.com/enabled: 'true'
@@ -58,6 +58,9 @@ spec:
           - disk:
               bus: virtio
             name: cloudinitdisk
+          - disk:
+              bus: scsi
+            name: disk-emerald-seahorse-85
           interfaces:
           - macAddress: 02:e9:21:00:00:21
             masquerade: {}
@@ -94,3 +97,7 @@ spec:
 
             chpasswd: { expire: False }'
         name: cloudinitdisk
+      - dataVolume:
+          hotpluggable: true
+          name: dv-fedora-demo-2-pink-raven-11
+        name: disk-emerald-seahorse-85

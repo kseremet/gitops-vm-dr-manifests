@@ -10,6 +10,12 @@ patches:
       kind: VirtualMachine
       group: kubevirt.io
 
+  - path: patches/power-on.yaml
+    target:
+      kind: VirtualMachine
+      group: kubevirt.io
+      labelSelector: "role=backend"
+
   # --- FAILOVER GROUPS (Activate by uncommenting) ---
 
   # - path: patches/power-on.yaml

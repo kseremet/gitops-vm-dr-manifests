@@ -47,13 +47,13 @@ This is the only manual change you should make in this repository.
     ```yaml
     patches:
       # Default state: ensure everything is off.
-      - path: ../patches/power-off.yaml
+      - path: patches/power-off.yaml
         target:
           kind: VirtualMachine
           group: kubevirt.io
     
       # --- FAILOVER GROUPS (Activate by uncommenting) ---
-      # - path: ../patches/power-off.yaml
+      # - path: patches/power-off.yaml
       #   target:
       #     kind: VirtualMachine
       #     group: kubevirt.io
@@ -64,13 +64,13 @@ This is the only manual change you should make in this repository.
     ```yaml
     patches:
       # Default state: ensure everything is off.
-      - path: ../patches/power-off.yaml
+      - path: patches/power-off.yaml
         target:
           kind: VirtualMachine
           group: kubevirt.io
     
       # --- FAILOVER GROUPS (Activate by uncommenting) ---
-      - path: ../patches/power-off.yaml
+      - path: patches/power-off.yaml
         target:
           kind: VirtualMachine
           group: kubevirt.io

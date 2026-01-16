@@ -1,6 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - pv-pvc-d4122ca2-29e6-4763-acfe-3ca4efe7cb9d.yaml
+  - pvc-fedora-blush-felidae-19.yaml
+  - vm-fedora-blush-felidae-19.yaml
   - pv-pvc-5a091ede-0451-4b6e-b4db-020c78ae1572.yaml
   - pvc-fedora-azure-salamander-94.yaml
   - vm-fedora-azure-salamander-94.yaml

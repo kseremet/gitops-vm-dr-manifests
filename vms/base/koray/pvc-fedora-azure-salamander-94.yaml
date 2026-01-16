@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations: {}
+  labels:
+    app: containerized-data-importer
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/managed-by: cdi-controller
+    app.kubernetes.io/part-of: hyperconverged-cluster
+    app.kubernetes.io/version: 4.20.3
+    instancetype.kubevirt.io/default-instancetype: u1.medium
+    instancetype.kubevirt.io/default-preference: fedora
+    kubevirt.io/created-by: 0842c8ba-bbca-48a2-8af6-b16f6a343cc7
+  name: fedora-azure-salamander-94
+  namespace: koray
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: '32212254720'
+  storageClassName: rook-ceph-block
+  volumeMode: Block
+  volumeName: pvc-5a091ede-0451-4b6e-b4db-020c78ae1572
